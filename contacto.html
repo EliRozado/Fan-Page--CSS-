@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>Severance</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Severance</h1>
+            <ul class="header-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="temporadas.html">Temporadas</a></li>
+                <li><a href="personajes.html">Personajes</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="caja">
+        <h2>Contactarse con la fanpage</h2>
+        <p>A través de este formulario puedes dejarnos un comentario y/o suscribirse al newsletter de la fanpage.</p>
+
+        <form action="/action_page.php" method="get">
+            <label for="fname">Nombre: </label><input type="text" id="fname" name="fname" required>
+            <label for="lname">Apellido: </label><input type="text" id="lname" name="lname" required>
+            <br>
+            <label for="email">Email: </label><input type="text" id="email" name="email" required>
+            <br>
+            <label for="comment">Comentario: </label>
+            <br>
+            <textarea id="comment" name="comment" required rows="6" cols="50"></textarea>
+
+            <br>
+            <input type="submit" id="submit">
+        </form>
+    </main>
+
+    <footer>
+        <p>Elizabeth Rozado 2025</p>
+    </footer>
+</body>
+</html>
