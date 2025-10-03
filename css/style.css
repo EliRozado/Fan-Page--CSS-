@@ -1,40 +1,57 @@
+:root{
+    --color-fondo: #f0f6f7;
+    --color-links: #0b0e29;
+    --color-links-hover: #26329b;
+    --color-boton-form: #4480b8;
+    --color-tarjetas-form: #dde4e7;
+    --color-bordes: #002c55;
+    --color-bordes-hover: #72a8db;
+    --color-footer: #252738;b
+}
+
 * {
     padding: 0px;
     margin: 0px;
 }
 
 body{ 
-    background-color: #f0f6f7; 
+    background-color: var(--color-fondo); 
     font-family: Arial, Helvetica, sans-serif;
 }
 
-header{ height: 50px; padding: 20px;}
+header{ height: 50px; padding: 20px; } 
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
 
 h1{ 
-    font-family: 'Funnel Sans';
+    font-family: 'Funnel Sans', sans-serif;
     font-size: 30px;
-    display: inline-block;  
 }
 
 .header-nav{
-    display: inline-block;
     margin-left: 20px;
+    display: flex;
+    flex-direction: row;
 }
 
 .header-nav li{
-    display: inline-block;
     padding: 5px;
     font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
 }
 
 .header-nav li a{
     text-decoration: none;
-    color: #0b0e29;
+    color: var(--color-links);
 }
 
 .header-nav li a:hover{
-    text-decoration: #0b0e29 underline 1px;
-    color: #26329b;
+    text-decoration: var(--color-links) underline 1px;
+    color: var(--color-links-hover);
 }
 
 .intro-img{
@@ -42,18 +59,58 @@ h1{
     text-align: center;
 }
 
-
-
 .caja{
     padding: 50px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 } 
 
 .caja h2{
-    font-family: 'Funnel Sans';
+    font-family: 'Funnel Sans', sans-serif;
     margin-bottom: 10px;
+    width: 100%;
+
 }
 
 .caja>p{ margin: 15px 0px; }
+
+.tarjeta-personaje{
+    width: 300px;
+    height: 340px;
+    padding: 20px;
+    background-color: var(--color-tarjetas-form);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tarjeta-personaje h3{
+    font-family: 'Funnel Sans', sans-serif;
+    text-transform: uppercase;
+}
+
+.tarjeta-personaje h3::after{
+    content: "SVR'D ACCESS";
+    font-weight: lighter;
+    font-size: 12px;
+    float: right;
+}
+
+.tarjeta-personaje img{
+    border: 5px solid var(--color-bordes);
+    border-radius: 10px;
+    max-width: 90%;
+    max-height:200px;
+    align-self: center;
+}
+
+.tarjeta-personaje img:hover{
+    border-color: var(--color-bordes-hover);
+}
 
 form{
     width: 600px;
@@ -65,68 +122,40 @@ form label, form input{
 
 form input{
     border-radius: 5px;
-    border: 1px solid #002c55;
+    border: 1px solid var(--color-bordes);
 }
 
 form #submit{
     font-size: 16px;
     font-family: 'Funnel Sans';
-    color:  #f0f6f7;
-    border: 1px solid #002c55;
-    background-color: #4480b8;
+    color:  var(--color-fondo);
+    border: 1px solid var(--color-bordes);
+    background-color: var(--color-boton-form);
     border-radius: 10px;
     padding: 10px;
     font-weight: bold;
 }
 
 #submit:hover{
-    background-color: #72a8db;
+    background-color: var(--color-bordes-hover);
 }
 
-.carta-personaje{
-    display: inline-block;
-    width: 300px;
+.contenedor-temporadas{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.tarjeta-temporada{ 
+    display: flex;
+    background-color: var(--color-tarjetas-form);
+    flex-direction: column;
+    align-items: center;
     padding: 20px;
-    height: 320px;
-    margin: 10px;
-    border: 1px solid #89aec8;
-    color: #002c55;
-    vertical-align: top;
     border-radius: 15px;
-}
-
-.carta-personaje h3{
-    margin: 5px 0px;
-}
-
-.carta-personaje p{
-    margin: 10px 0px;
-    font-size: 14px;
-}
-
-.personaje-img{
-    width: 250px;
-    height:220px;
-    overflow: hidden;
-    border-radius: 10px;
-    border: 5px solid #002c55;
-}
-
-.personaje-img img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.personaje-img:hover{
-    border-color: #11528f;
-}
-
-.caja-mitad{ 
-    display: inline-block;
-    width: 600px;
-    padding: 20px;
-    border: 1px solid black;
+    gap: 10px;
     margin: 10px;
 }
 
@@ -134,7 +163,7 @@ footer{
     text-align: center;
     width: 100%;
     padding: 40px;
-    background-color: #0b0e29;
-    color: #7b6727;
+    background-color: var(--color-footer);
+    color: var(--color-fondo);
 }
 
