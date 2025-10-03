@@ -6,7 +6,7 @@
     --color-tarjetas-form: #dde4e7;
     --color-bordes: #002c55;
     --color-bordes-hover: #72a8db;
-    --color-footer: #252738;b
+    --color-footer: #252738;
 }
 
 * {
@@ -60,7 +60,8 @@ h1{
 }
 
 .caja{
-    padding: 50px;
+    padding: 20px 50px;
+    max-width: 1340px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -113,7 +114,10 @@ h1{
 }
 
 form{
-    width: 600px;
+    max-width: 600px;
+    background-color: var(--color-tarjetas-form);
+    padding: 20px;
+    border-radius: 20px;
 }
 
 form label, form input{
@@ -140,13 +144,14 @@ form #submit{
     background-color: var(--color-bordes-hover);
 }
 
-.contenedor-temporadas{
+.cont-interno{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:20px;
 }
-
 
 .tarjeta-temporada{ 
     display: flex;
@@ -156,7 +161,15 @@ form #submit{
     padding: 20px;
     border-radius: 15px;
     gap: 10px;
+    max-width: 600px;
     margin: 10px;
+}
+
+.tarjeta-temporada iframe{
+    border-radius: 10px;
+    max-width: 90%;
+    max-height:300px;
+    align-self: center;
 }
 
 footer{
@@ -167,3 +180,35 @@ footer{
     color: var(--color-fondo);
 }
 
+@media screen  and (max-width: 780px){
+    header{
+        height: auto;
+    }
+
+    header nav{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .caja{
+        padding: 20px;
+    }
+
+    .tarjeta-temporada{
+        width: 90%;
+        height: auto;
+    }
+
+    form{
+        width: 90%;
+    }
+    
+}
+
+@media screen and (max-width: 480px) {
+    
+    .header-nav{
+        flex-direction: column;
+    }
+}
